@@ -5,4 +5,9 @@
     <h4>Name: {{userData?.name}}</h4>
     <p>Email: {{userData?.email}}</p>
     <p>Contact: {{userData?.contact}}</p>
+    <div style="display: flex; font-size: larger; font-weight: bold;">
+        <input type="checkbox" (input)="isChangesSave($event)" id="check" />
+        <label for="check" >Data Will Not Save</label>
+
+    </div>
 </div>

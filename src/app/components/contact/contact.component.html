@@ -18,9 +18,9 @@
     <label for="number">Contact Number</label>
     <input id="number" [value]="contact" (input)="setContact($event)" type="number" placeholder="Enter your Number" />
   </div>
-  <button type="submit">Submit</button>
+  <button [disabled]="disable" type="submit">Submit</button>
 </form>
 
-  <app-user-data [userData]="user" ></app-user-data>
+  <app-user-data [userData]="user" (isVisible)="isVisibleFun($event)" ></app-user-data>
   <h2>End</h2>
 

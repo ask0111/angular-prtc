@@ -15,6 +15,7 @@ export class ContactComponent {
   name = 'Hariom yadav';
   email = 'hariomask0111@gmail.com';
   contact = 7806014949;
+  disable= false;
 
   user = {name: "", email: "", contact: NaN};
 
@@ -38,5 +39,9 @@ export class ContactComponent {
     this.user = {name, email, contact};
     setTimeout(()=>{}, 40000)
     console.log(this.user)
+  }
+
+  isVisibleFun(value: boolean){
+    this.disable = value;
   }
 }
