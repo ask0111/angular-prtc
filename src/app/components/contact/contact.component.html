@@ -1,11 +1,13 @@
 <p>contact works!</p>
 
-<form class="width border gap" style="display: flex; column-gap: 12px; flex-direction: column;">
+
+<!-- The defference between ngSubmit and submit is event.preventDefault not work in ngSubmit -->
+<form (submit)="onSubmit($event, name, email, contact)" class="width border gap" style="display: flex; column-gap: 12px; flex-direction: column;">
   <div class="" style="display: flex; flex-direction: column;" >
     <label for="name">Name</label>
     <!-- ngModelChange no need to use this its only call for funcation exicute for any sertail condition change -->
     <!-- <input id="name"  [(ngModel)]="name" (ngModelChange)="setName($event)"  type="text" [ngModelOptions]="{standalone: true}" placeholder="Enter your name" /> -->
-    <input id="name" [value]="'name" (input)="setName($event)" type="text" [ngModelOptions]="{standalone: true}" placeholder="Enter your name" />
+    <input id="name" [value]="name" (input)="setName($event)" type="text" placeholder="Enter your name" />
   </div>
   
   <div class="" style="display: flex; flex-direction: column;" >
@@ -16,11 +18,9 @@
     <label for="number">Contact Number</label>
     <input id="number" [value]="contact" (input)="setContact($event)" type="number" placeholder="Enter your Number" />
   </div>
+  <button type="submit">Submit</button>
 </form>
 
-<div style="display: flex; flex-direction: column; column-gap: 12px; width: 40%; margin: auto;">
-    <h1 style="text-align: center;">User Details:</h1>
-    <h4>Name: {{name}}</h4>
-    <p>Email: {{email}}</p>
-    <p>Contact: {{contact}}</p>
-</div>
+  <app-user-data [userData]="user" ></app-user-data>
+  <h2>End</h2>
+
