@@ -3,14 +3,24 @@
 <form class="width border gap" style="display: flex; column-gap: 12px; flex-direction: column;">
   <div class="" style="display: flex; flex-direction: column;" >
     <label for="name">Name</label>
-    <input id="name" type="text" placeholder="Enter your name" />
+    <!-- ngModelChange no need to use this its only call for funcation exicute for any sertail condition change -->
+    <!-- <input id="name"  [(ngModel)]="name" (ngModelChange)="setName($event)"  type="text" [ngModelOptions]="{standalone: true}" placeholder="Enter your name" /> -->
+    <input id="name" [value]="'name" (input)="setName($event)" type="text" [ngModelOptions]="{standalone: true}" placeholder="Enter your name" />
   </div>
+  
   <div class="" style="display: flex; flex-direction: column;" >
     <label for="email">Email</label>
-    <input id="email" type="text" placeholder="Enter your Email" />
+    <input id="email" [value]="email" (input)="setEmail($event)" type="text" placeholder="Enter your Email" />
   </div>
   <div class="" style="display: flex; flex-direction: column;" >
     <label for="number">Contact Number</label>
-    <input id="number" type="number" placeholder="Enter your Number" />
+    <input id="number" [value]="contact" (input)="setContact($event)" type="number" placeholder="Enter your Number" />
   </div>
 </form>
+
+<div style="display: flex; flex-direction: column; column-gap: 12px; width: 40%; margin: auto;">
+    <h1 style="text-align: center;">User Details:</h1>
+    <h4>Name: {{name}}</h4>
+    <p>Email: {{email}}</p>
+    <p>Contact: {{contact}}</p>
+</div>
