@@ -1,0 +1,11 @@
+.width{
+    width: 500px;
+    margin: auto;
+    padding: 12px;
+    gap: 12px;
+}
+
+.border{
+    border: 1px solid red;
+}
+
