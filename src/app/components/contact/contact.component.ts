@@ -9,7 +9,7 @@ import { UserDataComponent } from './user-data/user-data.component';
   imports: [UserDataComponent, RouterOutlet],
   standalone: true,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
   name = 'Hariom yadav';
