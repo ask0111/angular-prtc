@@ -11,6 +11,7 @@ import { UserDataComponent } from './user-data/user-data.component';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
+
 export class ContactComponent {
   name = 'Hariom yadav';
   email = 'hariomask0111@gmail.com';
