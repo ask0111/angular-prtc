@@ -6,7 +6,7 @@ import { UserDataComponent } from './user-data/user-data.component';
 @Component({
   selector: 'app-contact',
   // imports: [FormsModule],
-  imports: [UserDataComponent, RouterOutlet],
+  imports: [UserDataComponent],
   standalone: true,
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
